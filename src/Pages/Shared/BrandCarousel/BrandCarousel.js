@@ -1,6 +1,6 @@
 import { useState } from "react";
 import Carousel from "react-bootstrap/Carousel";
-import ExampleCarouselImage from "components/ExampleCarouselImage";
+// import ExampleCarouselImage from "components/ExampleCarouselImage";
 
 function BrandCarousel() {
   const [index, setIndex] = useState(0);
@@ -12,18 +12,29 @@ function BrandCarousel() {
   return (
     <Carousel activeIndex={index} onSelect={handleSelect}>
       <Carousel.Item>
-        <ExampleCarouselImage text="First slide" />
-        <Carousel.Caption>
-          <h3>First slide label</h3>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-        </Carousel.Caption>
+        {/* <ExampleCarouselImage text="First slide" /> */}
+        <img
+          className="d-block w-100"
+          src="https://wallpapers-fenix.eu/full/180901/043647815.jpg"
+          alt="first-slide"
+        />
       </Carousel.Item>
       <Carousel.Item>
-        <ExampleCarouselImage text="Second slide" />
-        <Carousel.Caption>
-          <h3>Second slide label</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-        </Carousel.Caption>
+        {/* <ExampleCarouselImage text="Second slide" /> */}
+        <img
+          className="d-block w-100"
+          src="https://media.istockphoto.com/id/1255618333/photo/i-am-happy-in-nature.jpg?s=612x612&w=0&k=20&c=od9Wxkh6b5WzMDHVA9bee4CG92XpVlcrC7eRDDQUbpw="
+          alt="first-slide"
+        />
+      </Carousel.Item>
+
+      <Carousel.Item>
+        {/* <ExampleCarouselImage text="Second slide" /> */}
+        <img
+          className="d-block w-100"
+          src="https://media.istockphoto.com/id/1390054063/photo/portrait-of-beautiful-little-girl-in-summer-nature-at-sunset.jpg?s=612x612&w=0&k=20&c=F3qp5eeIXUbW-wQjZWQNFQnWkDVba_kY5VjMM4D6gw0="
+          alt="first-slide"
+        />
       </Carousel.Item>
     </Carousel>
   );

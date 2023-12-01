@@ -10,14 +10,13 @@ import {
   FaInstagram,
 } from "react-icons/fa6";
 import ListGroup from "react-bootstrap/ListGroup";
-// import BrandCarousel from "../BrandCarousel/BrandCarousel";
+import BrandCarousel from "../BrandCarousel/BrandCarousel";
 
 const RightSideNav = () => {
   return (
     <div>
       <ButtonGroup vertical>
         <Button className="mb-2" variant="outline-primary">
-          {/* <FaGoogle className="mr-2" /> */}
           <FaGoogle className="m-2"></FaGoogle>
           Login with Google
         </Button>
@@ -55,7 +54,9 @@ const RightSideNav = () => {
           </ListGroup.Item>
         </ListGroup>
       </div>
-      <div>{/* <BrandCarousel /> */}</div>
+      <div className="mt-2">
+        <BrandCarousel />
+      </div>
     </div>
   );
 };
