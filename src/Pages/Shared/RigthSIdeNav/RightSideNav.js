@@ -1,22 +1,40 @@
-import React from "react";
+import React, { useContext } from "react";
 import Button from "react-bootstrap/Button";
+import ListGroup from "react-bootstrap/ListGroup";
+import { GoogleAuthProvider } from "firebase/auth";
 import ButtonGroup from "react-bootstrap/ButtonGroup";
+import BrandCarousel from "../BrandCarousel/BrandCarousel";
+import { FaGoogle, FaGithub, FaLinkedin } from "react-icons/fa6";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 import {
   FaSquareWhatsapp,
   FaSquareInstagram,
   FaSquareFacebook,
   FaSquareTwitter,
-  FaSquareLinkedin,
 } from "react-icons/fa6";
-import { FaGoogle, FaGithub, FaLinkedin } from "react-icons/fa6";
-import ListGroup from "react-bootstrap/ListGroup";
-import BrandCarousel from "../BrandCarousel/BrandCarousel";
 
 const RightSideNav = () => {
+  const { providerLogin } = useContext(AuthContext);
+
+  const googleProvider = new GoogleAuthProvider();
+
+  const handleGoogleSignIn = () => {
+    providerLogin(googleProvider)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+      })
+      .catch((error) => console.log(error));
+  };
+
   return (
     <div>
       <ButtonGroup vertical>
-        <Button className="mb-2" variant="outline-primary">
+        <Button
+          onClick={handleGoogleSignIn}
+          className="mb-2"
+          variant="outline-primary"
+        >
           <FaGoogle className="m-2"></FaGoogle>
           Login with Google
         </Button>
