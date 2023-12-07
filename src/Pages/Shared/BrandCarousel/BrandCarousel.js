@@ -13,14 +13,14 @@ function BrandCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://wallpapers-fenix.eu/full/180901/043647815.jpg"
+          src="https://okcredit-blog-images-prod.storage.googleapis.com/2021/01/brand2.jpg"
           alt="first-slide"
         />
       </Carousel.Item>
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://media.istockphoto.com/id/1255618333/photo/i-am-happy-in-nature.jpg?s=612x612&w=0&k=20&c=od9Wxkh6b5WzMDHVA9bee4CG92XpVlcrC7eRDDQUbpw="
+          src="https://www.therecordnews.ca/wp-content/uploads/2023/08/Breaking-News_Facebook-Blocking-RGB.jpg"
           alt="first-slide"
         />
       </Carousel.Item>
@@ -28,7 +28,7 @@ function BrandCarousel() {
       <Carousel.Item>
         <img
           className="d-block w-100"
-          src="https://media.istockphoto.com/id/1390054063/photo/portrait-of-beautiful-little-girl-in-summer-nature-at-sunset.jpg?s=612x612&w=0&k=20&c=F3qp5eeIXUbW-wQjZWQNFQnWkDVba_kY5VjMM4D6gw0="
+          src="https://oge.tmu.edu.tw/wp-content/uploads/2019/01/%E4%B8%BB%E8%A6%96%E8%A6%BA1-04_181116.jpg"
           alt="first-slide"
         />
       </Carousel.Item>
