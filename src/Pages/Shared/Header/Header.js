@@ -19,7 +19,12 @@ function Header() {
   };
 
   return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary mb-4">
+    <Navbar
+      collapseOnSelect
+      expand="lg"
+      sticky="top"
+      className="bg-body-tertiary mb-4"
+    >
       <Container>
         <Navbar.Brand>
           <Link to="/">Dragon News</Link>
