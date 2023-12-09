@@ -1,13 +1,13 @@
-import Container from "react-bootstrap/Container";
-import Nav from "react-bootstrap/Nav";
-import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import LeftSideNav from "../LeftSideNav/LeftSideNav";
-import { Link } from "react-router-dom";
-import { FaUserAlt } from "react-icons/fa";
 import { useContext } from "react";
-import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
+import Nav from "react-bootstrap/Nav";
+import { Link } from "react-router-dom";
+import Navbar from "react-bootstrap/Navbar";
+import { FaUserAlt } from "react-icons/fa";
 import { Button, Image } from "react-bootstrap";
+import Container from "react-bootstrap/Container";
+import LeftSideNav from "../LeftSideNav/LeftSideNav";
+import NavDropdown from "react-bootstrap/NavDropdown";
+import { AuthContext } from "../../../contexts/AuthProvider/AuthProvider";
 
 function Header() {
   const { user, logOut } = useContext(AuthContext);

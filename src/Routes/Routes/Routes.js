@@ -1,10 +1,11 @@
-import { createBrowserRouter } from "react-router-dom";
 import Main from "../../layOut/Main";
-import Home from "../../Pages/Home/Home/Home";
-import Category from "../../Pages/Category/Category/Category";
 import News from "../../Pages/News/News/News";
+import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login/Login";
+import { createBrowserRouter } from "react-router-dom";
 import Register from "../../Pages/Login/Register/Register";
+import Category from "../../Pages/Category/Category/Category";
+import PrivateRoute from "../PraivetRoute/PrivateRoute";
 
 export const routes = createBrowserRouter([
   {
@@ -24,7 +25,11 @@ export const routes = createBrowserRouter([
       },
       {
         path: "/news/:id",
-        element: <News />,
+        element: (
+          <PrivateRoute>
+            <News />
+          </PrivateRoute>
+        ),
         loader: ({ params }) =>
           fetch(`http://localhost:5000/news/${params.id}`),
       },
