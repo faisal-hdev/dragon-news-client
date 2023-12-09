@@ -6,6 +6,7 @@ import { createBrowserRouter } from "react-router-dom";
 import Register from "../../Pages/Login/Register/Register";
 import Category from "../../Pages/Category/Category/Category";
 import PrivateRoute from "../PraivetRoute/PrivateRoute";
+import TermsAndConditions from "../../others/TermsAndConditions/TermsAndConditions";
 
 export const routes = createBrowserRouter([
   {
@@ -40,6 +41,10 @@ export const routes = createBrowserRouter([
       {
         path: "/register",
         element: <Register></Register>,
+      },
+      {
+        path: "/terms",
+        element: <TermsAndConditions></TermsAndConditions>,
       },
     ],
   },
